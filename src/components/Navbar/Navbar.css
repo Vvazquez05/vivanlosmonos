@@ -2,8 +2,11 @@
     background-color: grey;
     width: 200vh;
 }
+.ButonCart {
+    background-color: white;
+}
 button{
-    background-color: black;
+    background-color: rgb(11, 61, 97);
     color: white;
     margin: 1rem;
     padding: 0.5rem;
