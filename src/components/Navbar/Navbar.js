@@ -13,12 +13,12 @@ const Navbar = () => {
                 </h4>
             </div>
             <div className = "NavTira">
-                <button>Anime</button>
-                <button>Star Wars</button>
-                <button>Los Simpsons</button>
-                <button>Videojuegos</button>
-                <button>Super héroes</button>
-                <button className = "ButonCar"> <CartWidget /></button>10
+                <button className='Navbtn'>Anime</button>
+                <button className='Navbtn'>Star Wars</button>
+                <button className='Navbtn'>Los Simpsons</button>
+                <button className='Navbtn'>Videojuegos</button>
+                <button className='Navbtn'>Super héroes</button>
+                <button className = "ButonCar Navbtn"> <CartWidget /></button>10
             </div>
             
         </nav>

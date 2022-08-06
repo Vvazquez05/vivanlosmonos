@@ -1,0 +1,56 @@
+.count-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-container__contador {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    width: 140px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 40px auto 0;
+}
+
+.count-container__button {
+    color: black;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    font-size: 1.6rem;
+    transition: all 250ms ease-out;
+}
+
+.count-container__button:hover {
+    border: white;
+    color: black;
+    background-color: brown;
+}
+
+.count-container__button[disabled] {
+    color: transparent;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+}
+
+.count-container__qty {
+    text-align: center;
+    height: 100%;
+    padding-top: 10px;
+    color: var(--primary-color);
+    background-color: var(--just-white);
+}
+.button-primary {
+    background-color: brown;
+    border: none;
+    font-family: var(--mulish-font);
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 20px auto;
+    width: 112px;
+    height: 36px;
+    cursor: pointer;
+}

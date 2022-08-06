@@ -1,3 +1,4 @@
+import './Counter.css' 
 import { useState } from 'react'
 
 const Counter= ( {stock, onAdd} ) => {
@@ -13,13 +14,18 @@ const Counter= ( {stock, onAdd} ) => {
             setCount(count - 1)
         }  
     }
+    // const {onAdd} = () =>{
+    //     alert(`Acabas de agregar ${count} productos`)
+    // }
     return (
-        <div>
-            <h1>{count}</h1>
-            <button onClick={decrement}>-</button>
-            <button onClick={increment}>+</button>
-            <button onClick={() => onAdd(count)}>Agregar al Carrito</button> 
-        </div>    
+        <div className="count-container">
+            <div className="count-container__contador">
+                <button className="count-container__button" onClick={decrement} disabled = {count === 1}>-</button>
+                <span className="count-container__qty">{count}</span>
+                <button className="count-container__button" onClick={increment} disabled = {count === stock}>+</button>
+            </div>   
+                <button className="button-primary" onClick={() => onAdd(count)}>Añadir</button>     
+        </div>  
     ) 
 }
 export default Counter;
