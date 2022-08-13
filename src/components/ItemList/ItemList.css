@@ -1,5 +1,5 @@
 .Itemlist{
-    display: grid;
-    grid-template-columns: repeat(auto, 300px);
-    justify-content: center;
+    display: flex;
+    /* grid-template-columns: repeat(auto, 300px);
+    justify-content: center; */
     }

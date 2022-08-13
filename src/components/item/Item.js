@@ -1,17 +1,21 @@
 import './Item.css'
-import Counter from '../Counter/Counter';
+// import Counter from '../Counter/Counter';
 import { Link } from 'react-router-dom'
 
 
-const handleOnAdd = (quantity) => {
-    console.log(`la cantidad agregada es: ${quantity}`)
-}
-const Item = ({id, name, img, price, stock}) => {
+// const handleOnAdd = (quantity) => {
+//     console.log(`la cantidad agregada es: ${quantity}`)
+// }
+const Item = ({id, name, img, price}) => {
+    const handleClick = (e) => {
+        e.stopPropagation ()
+        console.log('hice click en item')
+    }
     return (
-        <article className="CardItem">
+        <article className="CardItem" onClick={handleClick}>
             <header className="Header">
                 <h2 className="ItemHeader">
-                    {name}
+                    {id} {name}
                 </h2>
             </header>
             <picture>
@@ -23,10 +27,11 @@ const Item = ({id, name, img, price, stock}) => {
                 </p>
             </section>           
             <footer className='ItemFooter'>
-                <Link to={`/detail/${id}`} className='Option'>Ver detalle</Link>
-                <Counter stock={stock} onAdd={handleOnAdd}/>
+                <Link to={`/detail/${id}`} className='Option Detalle Detalle'>Ver detalle</Link>
+                {/* <Counter stock={stock} onAdd={handleOnAdd}/> */}
             </footer>
         </article>
     )
 }
 export default Item
+
