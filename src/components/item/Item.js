@@ -15,7 +15,7 @@ const Item = ({id, name, img, price}) => {
         <article className="CardItem" onClick={handleClick}>
             <header className="Header">
                 <h2 className="ItemHeader">
-                    {id} {name}
+                    {name}
                 </h2>
             </header>
             <picture>
