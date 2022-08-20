@@ -1,8 +1,10 @@
-import { useState, createContext} from 'react'
+import { useState, createContext, useContext} from 'react'
+import AlertContext  from './Alert';
 
 const CartContext = createContext()
 
 export const CartContextProvider = ({ children }) => {
+    const {setNotification} = useContext(AlertContext)
     const [cart, setCart] = useState([])
     console.log(cart)
 
@@ -25,12 +27,14 @@ export const CartContextProvider = ({ children }) => {
             setCart(cartUpdated)
         }
     }
-
     const clearCart = () => {
+        setNotification('Información:', 'Tu carrito se ha vaciado')
         setCart([])
     }
 
     const removeItem = (id) => {
+        const prod = cart.find(u => u.id === id)
+        setNotification('Cuidado:', `Removiste ${prod.quantity} ${prod.name}`)
         const newCartWithoutProduct = cart.filter(prod => prod.id !== id)
         setCart(newCartWithoutProduct)
     }

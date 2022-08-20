@@ -8,7 +8,7 @@
 //         if (count < stock ) {
 //             setCount(count + 1)
 //         }  
-//     }
+//     }w
 //         const decrement = () => {
 //         if (count > 1 ) {
 //             setCount(count - 1)
