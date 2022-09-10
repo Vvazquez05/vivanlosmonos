@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Title{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+}
+.NavBar {
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    position: sticky;
+    background-color: grey;
+}
+
+.Categories {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+
+.Option {
+    background-color: rgb(11, 61, 97);
+    display: flex;
+        color: white;
+        margin: 1rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 10%;
+}
+
+.NavLink {
+    color: rgb(255, 0, 0)
+}
+
+h1{
+    padding: 2vh;
+}
